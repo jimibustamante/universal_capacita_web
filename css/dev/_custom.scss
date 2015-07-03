@@ -1,0 +1,566 @@
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+body {
+  padding-top: 94px;
+  position: relative;
+}
+
+body,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  min-width: 970px;
+}
+
+/* Don't let the lead text change font-size. */
+.lead {
+  font-size: 16px;
+}
+
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+
+/* Non-responsive overrides
+ *
+ * Utilize the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+  width: 970px;
+  max-width: none !important;
+}
+
+/* Demonstrate the grids */
+.col-xs-4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+  visibility: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* Undo form expansion */
+.navbar-form {
+  float: left;
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Copy-pasted from forms.less since we mixin the .form-inline styles. */
+.navbar-form .form-group {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-form .form-control-static {
+  display: inline-block;
+}
+
+.navbar-form .input-group {
+  display: inline-table;
+  vertical-align: middle;
+}
+
+.navbar-form .input-group .input-group-addon,
+.navbar-form .input-group .input-group-btn,
+.navbar-form .input-group .form-control {
+  width: auto;
+}
+
+.navbar-form .input-group > .form-control {
+  width: 100%;
+}
+
+.navbar-form .control-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio,
+.navbar-form .checkbox {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.navbar-form .radio label,
+.navbar-form .checkbox label {
+  padding-left: 0;
+}
+
+.navbar-form .radio input[type="radio"],
+.navbar-form .checkbox input[type="checkbox"] {
+  position: relative;
+  margin-left: 0;
+}
+
+.navbar-form .has-feedback .form-control-feedback {
+  top: 0;
+}
+
+//END NON RESPONSIVE
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,300,700);
+
+body,html {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2,h3,h4,h5 {
+  font-weight: 700;
+}
+
+.header {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+  border: none;
+  box-shadow: 0 0px 7px #666;
+
+  // display: none;
+
+  .navbar-brand {
+    margin: 0;
+    display: block;
+    overflow: hidden;
+    width: 340px;
+    height: 94px;
+    font-weight: 700;
+    color: #333;
+    img {
+      width: 60px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+  .menu {
+    height: 39px;
+    margin: 24px 0;
+    li {
+      float: left;
+      &:nth-child(4) {
+        a {
+          padding-right: 0;
+          font-weight: 700;
+          &:hover {
+            border: none;
+          }
+        }
+      }
+      a {
+        line-height: 26px;
+        font-size: 16px;
+        padding: 10px 35px;
+        text-align: center;
+        &:hover {
+          background-color: #fff;
+          border-bottom: 2px solid #4C73E4;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.intro {
+  height: 440px;
+  background-color: #000;
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  position:relative;
+  .call {
+    height: 134px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0; right:0; bottom: 0; left:0;
+    h1 {
+      font-size: 46px;
+      text-shadow: 1px 1px 3px #000;
+    }
+    h1, small {
+	    text-align: center;
+    	color: #fff;
+      display: block;
+      margin: 0;
+    }
+    .more {
+      margin: 20px auto;
+      display: block;
+      width: 122px;
+    }
+  }
+}
+
+.nosotros {
+  height: 440px;
+  h2 {
+    text-align: center;
+    margin: 40px 0;
+  }
+}
+
+.relatores {
+  height: 440px;
+  h2 {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .relator {
+    width: 200px;
+    height: 200px;
+    margin-right: 46px;
+    position: relative;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 100%; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+
+      /* useful if you don't want a bg color from leaking outside the border: */
+      background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */ 
+    }
+    .carousel-caption {
+      left: 0;
+      right: 0;
+      padding-bottom: 0;
+      top: 177px;
+      h3 {
+        color: #333;
+        text-shadow: none;
+      }
+      h4 {
+        color: #333;
+        text-shadow: none;
+      }
+      p {
+        color: #666;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+.cursos {
+  height: auto;
+  background: #F9F9F9;
+  padding-bottom: 20px;
+  h2 {
+    text-align: center;
+    margin: 40px 0;
+  }
+  .curso {
+    width: 269px;
+    margin-right: 46px;
+    position: relative;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+    h3 {
+      margin-top: 0;
+    }    
+  }
+}
+
+.contacto {
+  height: 440px;
+  background-color: #fff;
+  background: url(../img/bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  h2 {
+    text-align: center;
+    margin: 40px 0;
+    color: #fff;
+  }
+  .formulario-contacto {
+    width: 500px;
+    margin: 0 auto;
+    display: block;
+    .contact-error {
+      color:red;
+      p.empty-value{
+        display: none;
+        font-size: 0.8em;
+      }
+    }
+    .form-group {
+      margin: 0;
+      .control-label {
+        margin-bottom: 8px;
+      }
+    }
+    textarea {
+      margin-bottom: 10px;
+    }
+  }
+  .btn {
+    margin: 0 auto;
+    display: block;
+  }
+  label {
+    color: #fff;
+  }
+}
+
+a {
+  color: #3053b8;
+}
+
+a:hover {
+  color: #4C73E4;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #3053b8;
+  border-color: #3053b8;
+}
+
+.btn-default:hover, .btn-default:active,.btn-default:focus {
+  color: #fff;
+  background-color: #4C73E4;
+  border-color: #4C73E4;
+}
+
+.btn-default {
+  &.info {
+    color: #333333;
+    background-color: transparent;
+    border-color: #333333;
+    margin-top: 20px;
+  }
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  .datos {
+    float: left;
+    width: 50%;
+    line-height: 36px;
+  }
+  .linkedin {
+    float: right;
+    width: 50%;
+    img {
+      float: right;
+    }
+  }
+}
+
+.tabs_style {
+  border-bottom: none;
+  li {
+    a {
+      width: 316px;
+      text-align: center;
+      border-radius: 2px 2px 0 0;
+      margin-right: 0;
+      padding: 15px 0;
+      border: 1px solid #f1f1f1;
+      background-color: #f1f1f1;
+      border-right: 1px solid #ddd;
+      &:last-child {
+        width: 312px;
+        border-right: none;
+      }
+    }    
+    &.active {
+      a {
+        padding: 15px 0;
+        width: 316px;
+        text-align: center;
+        border-radius: 2px 2px 0 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.tab-content {
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #333;
+  border-top-color: transparent;
+  height: auto;
+  background-color: #fff;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+  border: 1px solid #333;
+  border-bottom-color: transparent;
+  background-color: #fff;
+}
+
+#Perfeccionamientos {
+  overflow-y: hidden;
+  width: 899px;
+  overflow-x: scroll;
+  height: 300px;
+  // white-space: nowrap;
+}
+
+p {
+  &.descripcion {
+    width: 410px;
+    float: left;
+    margin-right:40px;
+    margin-bottom:0;
+  }
+}
+
+.formulario-asesorias, .formulario-coaching {
+  width: 448px;
+  float: left;
+  .form-group {
+    margin-left: 0; 
+    margin-right: 0; 
+  }
+}
+
+.modal {
+  overflow: hidden; 
+}
+
+
+.formulario-perfeccionamiento {
+  width: 300px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
