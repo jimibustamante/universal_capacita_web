@@ -509,18 +509,37 @@ h1, h2,h3,h4,h5 {
     background-color: transparent;
     background-color:rgba(0, 0, 0, 0.8);
   }
+
+  .formulario-contacto, .formulario-coaching {
+    .contact-error {
+      color:red;
+      p.empty-value {
+        display: none;
+        font-size: 0.8em;
+      }
+    }
+    .send-email-error {
+      color:red;
+      p.feedback {
+        display: none;
+        font-size: 0.8em;        
+      }
+    }
+    .sent-success {
+      color:green;
+      p.feedback {
+        display: none;
+        font-size: 1.2em;
+        font-weight: 900;        
+      }
+    }
+  }
+
   .formulario-contacto {
     width: 500px;
     height: 440px;
     margin: 0 auto;
     display: block;
-    .contact-error {
-      color:red;
-      p.empty-value{
-        display: none;
-        font-size: 0.8em;
-      }
-    }
     .form-group {
       margin: 0;
       .control-label {

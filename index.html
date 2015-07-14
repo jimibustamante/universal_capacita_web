@@ -107,29 +107,37 @@ title: Universal Capacita
           <p class="descripcion">Bajo la mirada del coach ontológico,  ofrecemos procesos de acompañamiento  individual, que buscan potenciar y desarrollar habilidades de liderazgo, relacionales o comunicacionales, según el objetivo que se defina.
           <br><br>El proceso contempla entre 10 a 12 sesiones individuales de una hora y está dirigido a directivos y profesionales de la educación, que requieran trabajar en algún ámbito de sus competencias laborales.</p>
           <form class="form-horizontal formulario-coaching">
-
+            <div class="contact-error">
+              <p class="empty-value">Quedan campor por completar.</p>
+            </div>
+            <div class="send-email-error">
+              <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+            </div>
+            <div class="sent-success">
+              <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+            </div>
             <div class="form-group">
               <label for="inputNombre" class="control-label">Nombre</label>
-              <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+              <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
             </div>
 
             <div class="form-group">
               <label for="inputEmail" class="control-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
             </div>
 
             <div class="form-group">
               <label for="inputTelefono" class="control-label">Teléfono</label>
-                <input type="email" class="form-control" id="inputTelefono" placeholder="Teléfono">
+                <input type="email" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
             </div>
 
             <div class="form-group">
               <label for="inputMensaje" class="control-label">Mensaje</label>
-                <textarea class="form-control" rows="3" placeholder="Mensaje"></textarea>
+                <textarea class="form-control message" rows="3" placeholder="Mensaje"></textarea>
             </div>
 
             <div class="form-group">
-              <button type="submit" class="btn btn-default">Solicitar Cotización</button>
+              <button type="submit" class="submit-coaching btn btn-default">Solicitar Cotización <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
             </div>
 
           </form>
@@ -239,6 +247,12 @@ title: Universal Capacita
         <div class="contact-error">
           <p class="empty-value">Quedan campor por completar.</p>
         </div>
+        <div class="send-email-error">
+          <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+        </div>
+        <div class="sent-success">
+          <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+        </div>
         <div class="form-group">
           <label for="inputNombre" class="control-label">Nombre</label>
           <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
@@ -255,7 +269,7 @@ title: Universal Capacita
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-default submit-contact">Enviar</button>
+          <button type="submit" class="btn btn-default submit-contact">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
         </div>
 
       </form>
