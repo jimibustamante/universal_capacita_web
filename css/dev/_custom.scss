@@ -301,7 +301,7 @@ h1, h2,h3,h4,h5 {
   position:relative;
   .call {
     background-color: transparent;
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(0, 0, 0, 0.6);
     height: 100%;
     h1 {
       display: block;
@@ -540,7 +540,7 @@ h1, h2,h3,h4,h5 {
   }
   .bg-contacto {
     background-color: transparent;
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(0, 0, 0, 0.6);
   }
 
 
@@ -748,10 +748,20 @@ p {
   }
 }
 
-#ancla1, #ancla2, #ancla3, #ancla4, #ancla5 {
+#ancla1 {
   height: 94px;
   display: block;
 }
+
+
+
+#ancla2, #ancla3, #ancla4, #ancla5 {
+  margin-top: -94px;
+  height: 94px;
+  display: block;
+}
+
+
 
 
 
