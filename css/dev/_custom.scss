@@ -491,6 +491,36 @@ h1, h2,h3,h4,h5 {
   }
 }
 
+#Coaching, #contacto {
+  .formulario-contacto, .formulario-coaching {
+    .contact-error {
+      color:red;
+      p.empty-value {
+        display: none;
+        font-size: 0.8em;
+        margin-top: 0;
+      }
+    }
+    .send-email-error {
+      color:red;
+      p.feedback {
+        display: none;
+        font-size: 0.8em;  
+        margin-top: 0;     
+      }
+    }
+    .sent-success {
+      color:green;
+      p.feedback {
+        display: none;
+        font-size: 1.2em;
+        font-weight: 900;    
+        margin-top: 0;    
+      }
+    }
+  }
+}
+
 .contacto {
   height: 440px;
   background-color: #fff;
@@ -510,30 +540,6 @@ h1, h2,h3,h4,h5 {
     background-color:rgba(0, 0, 0, 0.8);
   }
 
-  .formulario-contacto, .formulario-coaching {
-    .contact-error {
-      color:red;
-      p.empty-value {
-        display: none;
-        font-size: 0.8em;
-      }
-    }
-    .send-email-error {
-      color:red;
-      p.feedback {
-        display: none;
-        font-size: 0.8em;        
-      }
-    }
-    .sent-success {
-      color:green;
-      p.feedback {
-        display: none;
-        font-size: 1.2em;
-        font-weight: 900;        
-      }
-    }
-  }
 
   .formulario-contacto {
     width: 500px;
