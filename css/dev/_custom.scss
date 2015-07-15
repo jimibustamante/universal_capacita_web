@@ -6,7 +6,7 @@
 
 /* Account for fixed navbar */
 body {
-  padding-top: 94px;
+  // padding-top: 94px;
   position: relative;
 }
 
@@ -276,6 +276,9 @@ h1, h2,h3,h4,h5 {
         &:hover {
           background-color: #fff;
           border-bottom: 2px solid #4C73E4;
+        }
+        img {
+          margin-top: -10px;
         }
       }
     }
@@ -744,4 +747,12 @@ p {
     margin-bottom: 8px;
   }
 }
+
+#ancla1, #ancla2, #ancla3, #ancla4, #ancla5 {
+  height: 94px;
+  display: block;
+}
+
+
+
 
