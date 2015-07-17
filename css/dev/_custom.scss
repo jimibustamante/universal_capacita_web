@@ -728,11 +728,17 @@ p {
     width: 900px;
   }
   .modal-content {
-    height: 748px;
+    height: 629px;
     .descripcion {
-      width: 370px;
+      padding-right: 20px;
+      text-align: justify;
+      height: 509px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 390px;
       margin-right: 0;
       float: left;
+      line-height: 22px;
     }
     .formulario-perfeccionamiento {
       width: 448px;
