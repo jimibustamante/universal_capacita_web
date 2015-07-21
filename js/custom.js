@@ -45,6 +45,26 @@ var sendCoachingEmail = function() {
   }
 }
 
+var sendCourseEmail = function(title, el) {
+  event.preventDefault()
+  var contact_form = $(el.parentElement.parentElement)
+  var email, name, phone, city, region, quantity, inst_name 
+  name = contact_form.find('.name').val()
+  inst_name = contact_form.find('.inst-name').val()
+  email = contact_form.find('.email').val()
+  phone = contact_form.find('.phone').val()
+  city = contact_form.find('.city').val()
+  region = contact_form.find('.region').val()
+  quantity = contact_form.find('.quantity').val()
+
+  var html = "<p>Hey Admin, un cliente te ha solicitado información sobre el curso <b>" + title + "</b>:</p> <p>Nombre : " + name + " </p> <p>Nombre Institución : " + inst_name + " </p> <p>Email : " + email + " </p> <p>Teléfono : " + phone + " </p><p>Ciudad : " + city + " </p>  <p>Región : " + region + " </p><p>Cantidad de Asistentes : " + quantity + " </p> "
+
+  if (formValidation([email, name, city, phone, quantity, region, inst_name], email, contact_form)) {
+    var spinner = contact_form.find('.send-spinner')
+    sendMandrillEmail(setParams("jimibustamante@gmail.com", html, "Solicitud de información de curso"), sendFeedbackContactEmail, spinner, contact_form)
+  }
+}
+
 var formValidation = function(data, email, form) {
   var messageElement = form.find('.empty-value')
   var validate = true
@@ -69,7 +89,7 @@ var sendMandrillEmail = function (data, successCallback, spinner, contact_form) 
       if (spinner) {spinner.hide()}
       messageElement.show()
       if (successCallback) {
-        successCallback()
+        successCallback(contact_form)
       }
     },
     error : function (data) {
@@ -81,12 +101,10 @@ var sendMandrillEmail = function (data, successCallback, spinner, contact_form) 
 }
 
 // Luego que se envía mensaje a admin se gatilla email para el cliente, en formulario de contactos
-var sendFeedbackContactEmail = function (argument) {
-  var email, name, message
-  var contact_form = $('form.formulario-contacto')
+var sendFeedbackContactEmail = function (contact_form) {
+  var email, name
   email = contact_form.find('.email').val()
   name = contact_form.find('.name').val()
-  message = contact_form.find('.message').val()
   var html = "<p>Estimado(a) " + name + ", hemos recibido tu mensaje. En breve contestaremos tu solicitud.</p>"
   sendMandrillEmail(setParams(email, html, "Hemos recibido tu mensaje."), null, null, contact_form)
 }

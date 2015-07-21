@@ -201,7 +201,7 @@ title: Universal Capacita
             </div>
 
             <div class="form-group">
-              <button type="submit" class="btn btn-default">Enviar</button>
+              <button type="submit" class="btn btn-default">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></button>
             </div>
 
           </form>
@@ -323,41 +323,49 @@ title: Universal Capacita
         <h4 class="modal-title" id="myModalLabel">Adecuaciones curriculares (AACC), una herramienta para la atención de la diversidad</h4>
       </div>
       <div class="modal-body">
-      <div class="descripcion">
-        Todos sabemos que el currículum escolar está diseñado para un inexistente “alumno medio” y que en la gran mayoría de las veces, un porcentaje no menor de ellos, requiere de algún tipo de ajuste. 
-        <br><br>Las necesidades educativas de los estudiantes requieren de la implementación de medidas y recursos especiales que permitan que éstos accedan a los aprendizajes y se desarrollen tanto personal como socialmente. <br><br> En este curso Ud. encontrará respuesta a preguntas frecuentes como qué alumnos requieren de esta adaptación, qué tipo de adecuaciones existen, cuándo y cómo aplicarlas.
-      </div>
+        <div class="descripcion">
+          Todos sabemos que el currículum escolar está diseñado para un inexistente “alumno medio” y que en la gran mayoría de las veces, un porcentaje no menor de ellos, requiere de algún tipo de ajuste. 
+          <br><br>Las necesidades educativas de los estudiantes requieren de la implementación de medidas y recursos especiales que permitan que éstos accedan a los aprendizajes y se desarrollen tanto personal como socialmente. <br><br> En este curso Ud. encontrará respuesta a preguntas frecuentes como qué alumnos requieren de esta adaptación, qué tipo de adecuaciones existen, cuándo y cómo aplicarlas.
+        </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -379,11 +387,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Adecuaciones curriculares (AACC)', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -407,35 +415,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -457,11 +473,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('El rol del profesor mediador en los aprendizajes autónomos y significativos de los estudiantes', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -484,35 +500,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -533,12 +557,12 @@ title: Universal Capacita
           </div>
 
           <div class="form-group">
-            <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+            <label for="inputCantidad quantity" class="control-label">Cantidad de Asistentes</label>
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Recursos para la convivencia escolar y resolución de conflictos', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -561,35 +585,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -611,11 +643,12 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
+
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Diseño Universal de Aprendizaje (DUA), una herramienta para la atención a la diversidad', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -638,35 +671,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -688,11 +729,12 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
+
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Trabajo Colaborativo, un factor determinante en la inclusión', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -715,35 +757,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -765,11 +815,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Intervención en contextos educativos de niñas y niños con Necesidades Educativas Especiales (N.E.E) asociadas al Trastorno del Espectro Autista (TEA)', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -792,35 +842,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -842,11 +900,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Intervención en Contextos Educativos de Niños(as) con Necesidades Educativas Especiales que se encuentran en los PIE', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -869,35 +927,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -919,11 +985,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Inteligencia Emocional, una herramienta para los aprendizajes', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -946,35 +1012,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -996,11 +1070,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Estrategias para el aprendizaje autónomo, más allá de una Técnica de Estudio', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -1024,35 +1098,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -1074,11 +1156,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('CURSO-TALLER Evaluación y cuento', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>
@@ -1102,35 +1184,43 @@ title: Universal Capacita
         </div>
 
         <form class="form-horizontal formulario-perfeccionamiento">
-
+          <div class="contact-error">
+            <p class="empty-value">Quedan campor por completar.</p>
+          </div>
+          <div class="send-email-error">
+            <p class="feedback">No hemos podido enviar el correo, por favor verifica tus datos y vuelve a intentar.</p>
+          </div>
+          <div class="sent-success">
+            <p class="feedback">Hemos recibido tu mensaje, pronto te responderemos.</p>
+          </div>
           <div class="form-group">
             <label for="inputNombre" class="control-label">Nombre</label>
-            <input type="nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+            <input type="nombre" class="form-control name" id="inputNombre" placeholder="Nombre">
           </div>
 
           <div class="form-group">
             <label for="inputNombreInstitucion" class="control-label">Nombre Institución</label>
-            <input type="nombre" class="form-control" id="inputInstitucion" placeholder="Nombre Institución">
+            <input type="nombre" class="form-control inst-name" id="inputInstitucion" placeholder="Nombre Institución">
           </div>
 
           <div class="form-group">
             <label for="inputEmail" class="control-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control email" id="inputEmail" placeholder="Email">
           </div>
 
           <div class="form-group">
             <label for="inputTelefono" class="control-label">Teléfono</label>
-              <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+              <input type="text" class="form-control phone" id="inputTelefono" placeholder="Teléfono">
           </div>
 
           <div class="form-group">
             <label for="inputCiudad" class="control-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
+              <input type="text" class="form-control city" id="inputCiudad" placeholder="Ciudad">
           </div>
 
           <div class="form-group">
             <label for="inputRegión" class="control-label">Región</label>
-            <select class="form-control">
+            <select class="form-control region">
               <option>Selecciona Región</option>
               <option>XV Arica y Parinacota</option>
               <option>I Tarapacá</option>
@@ -1152,11 +1242,11 @@ title: Universal Capacita
 
           <div class="form-group">
             <label for="inputCantidad" class="control-label">Cantidad de Asistentes</label>
-              <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad de Asistentes">
+              <input type="text" class="form-control quantity" id="inputCantidad" placeholder="Cantidad de Asistentes">
           </div>
 
           <div class="form-group">
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default" onclick="sendCourseEmail('Instrumentos de evaluación PSL y PRP y las estrategias de rehabilitación que pudieran derivarse de su aplicación (Estudio de caso)', this)">Enviar <i style="display:none;" class="send-spinner fa fa-spinner fa-pulse"></i></button>
           </div>
 
         </form>

@@ -494,8 +494,8 @@ h1, h2,h3,h4,h5 {
   }
 }
 
-#Coaching, #contacto {
-  .formulario-contacto, .formulario-coaching {
+#Coaching, #contacto, .modal {
+  .formulario-contacto, .formulario-coaching, .formulario-perfeccionamiento {
     .contact-error {
       color:red;
       p.empty-value {
@@ -728,7 +728,7 @@ p {
     width: 900px;
   }
   .modal-content {
-    height: 629px;
+    height: 680px;
     .descripcion {
       padding-right: 20px;
       text-align: justify;
