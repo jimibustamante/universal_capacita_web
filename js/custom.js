@@ -24,7 +24,7 @@ var sendNotificationEmail = function() {
 
   if (formValidation([email, name, message], email, contact_form)) {
     var spinner = contact_form.find('.send-spinner')
-    sendMandrillEmail(setParams("jimibustamante@gmail.com", html, "Nuevo Contacto"), sendFeedbackContactEmail, spinner, contact_form)
+    sendMandrillEmail(setParams("coordinacion@universalcapacita.cl", html, "Nuevo Contacto"), sendFeedbackContactEmail, spinner, contact_form)
   }
 }
 
@@ -41,7 +41,7 @@ var sendCoachingEmail = function() {
 
   if (formValidation([email, name, message, phone], email, contact_form)) {
     var spinner = contact_form.find('.send-spinner')
-    sendMandrillEmail(setParams("jimibustamante@gmail.com", html, "Solicitud Coaching"), sendFeedbackContactEmail, spinner, contact_form)
+    sendMandrillEmail(setParams("coordinacion@universalcapacita.cl", html, "Solicitud Coaching"), sendFeedbackContactEmail, spinner, contact_form)
   }
 }
 
@@ -61,7 +61,7 @@ var sendCourseEmail = function(title, el) {
 
   if (formValidation([email, name, city, phone, quantity, region, inst_name], email, contact_form)) {
     var spinner = contact_form.find('.send-spinner')
-    sendMandrillEmail(setParams("jimibustamante@gmail.com", html, "Solicitud de información de curso"), sendFeedbackContactEmail, spinner, contact_form)
+    sendMandrillEmail(setParams("coordinacion@universalcapacita.cl", html, "Solicitud de información de curso"), sendFeedbackContactEmail, spinner, contact_form)
   }
 }
 
