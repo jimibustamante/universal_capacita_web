@@ -390,55 +390,55 @@ h1, h2,h3,h4,h5 {
 }
 
 .relatores {
-  height: 440px;
-  background-color: #A2A2A2;
-
-  // overflow-x: scroll;
-  // width: 970px;
-  // overflow-y: hidden;
-  // height: 226px;
-  ul {
-    height: 200px;
-    /* overflow-x: scroll; */
-    /* overflow-y: hidden; */
-    width: 1508px;
-    margin: 0;
-    padding: 0;
-    li {
-      list-style: none;
-      margin-right: 48px;
-      display: inline-block;
+  // height: 440px;
+  // background-color: #A2A2A2;
+  background-color: #20457c;
+  .carousel {
+    padding: 0 0 50px 0;
+    .glyphicon {
+      font-size: 40px;
+      margin-top: 86px;
     }
   }
   .container {
-    // overflow-x: scroll;
-    // width: 970px;
-    // overflow-y: hidden;
-    // height: 226px;
-    height: 270px;
+    ul {
+      // height: 440px;
+      width: 1508px;
+      margin: 0 100px 0 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin-left: 88px;
+        display: inline-block;
+        height: 250px;
+        // &:nth-child(0n+3) {
+        //   margin-right: 0;
+        // }
+      }
+    }
+    // height: 440px;
     overflow-y: hidden;
   }
   h2 {
     text-align: center;
     margin: 40px 0;
+    color: #fff;
   }
   .relator {
     width: 200px;
     height: 200px;
-    margin-right: 46px;
+    // margin-right: 46px;
     position: relative;
     float: left;
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
     img {
       width: 200px;
       height: 200px;
       overflow: hidden;
-      border-radius: 100%; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
-
-      /* useful if you don't want a bg color from leaking outside the border: */
-      background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */ 
+      border-radius: 100%;
+      background-clip: padding-box;
     }
     .carousel-caption {
       left: 0;
@@ -446,11 +446,11 @@ h1, h2,h3,h4,h5 {
       padding-bottom: 0;
       top: 177px;
       h3 {
-        color: #333;
+        color: #fff;
         text-shadow: none;
       }
       h4 {
-        color: #333;
+        color: #fff;
         text-shadow: none;
       }
       p {
@@ -460,6 +460,17 @@ h1, h2,h3,h4,h5 {
     }
   }
 }
+
+
+.carousel-control.right,.carousel-control.left {
+  background-color: none;
+  background-image: none;
+}
+
+.carousel-indicators {
+    bottom: 6px;
+}
+
 
 .cursos {
   height: auto;
@@ -500,25 +511,28 @@ h1, h2,h3,h4,h5 {
       color:red;
       p.empty-value {
         display: none;
-        font-size: 0.8em;
+        font-size: 16px;
         margin-top: 0;
+        font-weight: normal;
       }
     }
     .send-email-error {
       color:red;
       p.feedback {
         display: none;
-        font-size: 0.8em;  
-        margin-top: 0;     
+        font-size: 16px;
+        margin-top: 0;
+        font-weight: normal;     
       }
     }
     .sent-success {
       color:green;
       p.feedback {
         display: none;
-        font-size: 1.2em;
+        font-size: 16px;
         font-weight: 900;    
-        margin-top: 0;    
+        margin-top: 0;
+        font-weight: normal;
       }
     }
   }
@@ -766,6 +780,66 @@ p {
   height: 94px;
   display: block;
 }
+
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($primary, white, 75%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+// @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+//   ::-webkit-scrollbar {
+//       width:  $size;
+//       height: $size;
+//   }
+
+//   ::-webkit-scrollbar-thumb {
+//       background: $foreground-color;
+//   }
+
+//   ::-webkit-scrollbar-track {
+//       background: $background-color;
+//   }
+
+//   // For Internet Explorer
+//   body {
+//     scrollbar-face-color: $foreground-color;
+//     scrollbar-track-color: $background-color;
+//   }
+// }
+
+// @include scrollbars(.5em, slategray);
+
+#contacto {
+  .formulario-contacto {
+    .sent-success, .contact-error, .send-email-error {
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-weight: normal;
+      margin: 0;
+      p { 
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        margin: 0;
+        &.feedback, &.empty-value {
+          color: #fff;
+          text-align: center;
+          font-size: 18px;
+          font-weight: normal;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 
