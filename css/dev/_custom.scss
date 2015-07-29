@@ -539,7 +539,7 @@ h1, h2,h3,h4,h5 {
 }
 
 .contacto {
-  height: 440px;
+  height: 461px;
   background-color: #fff;
   background: url(../img/bg2.jpg) no-repeat center top fixed; 
   -webkit-background-size: cover;
@@ -836,6 +836,15 @@ p {
         }
       }
     }
+  }
+  p.address {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    top: -20px;
+    margin: 0;
   }
 }
 
