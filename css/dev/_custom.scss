@@ -292,7 +292,7 @@ h1, h2,h3,h4,h5 {
 .intro {
   height: 440px;
   background-color: #000;
-  background: url(../img/bg.jpg) no-repeat center center fixed; 
+  background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -362,11 +362,11 @@ h1, h2,h3,h4,h5 {
       height: 200px;
       overflow: hidden;
       margin: auto;
-      display: block; 
+      display: block;
       border-radius: 100%; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 
       /* useful if you don't want a bg color from leaking outside the border: */
-      background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */ 
+      background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
     }
     .carousel-caption {
       left: 0;
@@ -479,7 +479,7 @@ h1, h2,h3,h4,h5 {
   #Perfeccionamientos {
     ul {
       li {
-        list-style: none; 
+        list-style: none;
         line-height: 23px;
         a {
           font-size: 12px;
@@ -501,7 +501,7 @@ h1, h2,h3,h4,h5 {
     }
     h3 {
       margin-top: 0;
-    }    
+    }
   }
 }
 
@@ -522,7 +522,7 @@ h1, h2,h3,h4,h5 {
         display: none;
         font-size: 16px;
         margin-top: 0;
-        font-weight: normal;     
+        font-weight: normal;
       }
     }
     .sent-success {
@@ -530,7 +530,7 @@ h1, h2,h3,h4,h5 {
       p.feedback {
         display: none;
         font-size: 16px;
-        font-weight: 900;    
+        font-weight: 900;
         margin-top: 0;
         font-weight: normal;
       }
@@ -541,7 +541,7 @@ h1, h2,h3,h4,h5 {
 .contacto {
   height: 461px;
   background-color: #fff;
-  background: url(../img/bg2.jpg) no-repeat center top fixed; 
+  background: url(../img/bg2.jpg) no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -654,7 +654,7 @@ a:hover {
         width: 470px!important;
         border-right: none;
       }
-    }    
+    }
     &.active {
       a {
         padding: 15px 0;
@@ -687,7 +687,7 @@ a:hover {
   overflow-y: hidden;
   width: 899px;
   // overflow-x: scroll;
-  height: 400px;
+  height: inherit;
   // white-space: nowrap;
 }
 
@@ -704,13 +704,13 @@ p {
   width: 448px;
   float: left;
   .form-group {
-    margin-left: 0; 
-    margin-right: 0; 
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 .modal {
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 
@@ -821,7 +821,7 @@ p {
       font-size: 18px;
       font-weight: normal;
       margin: 0;
-      p { 
+      p {
         color: #fff;
         text-align: center;
         font-size: 18px;
@@ -847,11 +847,3 @@ p {
     margin: 0;
   }
 }
-
-
-
-
-
-
-
-
