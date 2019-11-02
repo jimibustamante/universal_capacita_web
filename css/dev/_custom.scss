@@ -505,11 +505,11 @@ h1, h2,h3,h4,h5 {
   }
 }
 
-#Coaching, #contacto, .modal {
-  .formulario-contacto, .formulario-coaching, .formulario-perfeccionamiento {
+#Coaching, #contacto, .modal, .modal-content {
+  .formulario-contacto, .formulario-coaching, .formulario-perfeccionamiento, .formulario-inscripcion {
     .contact-error {
       color:red;
-      p.empty-value {
+      p.empty-value , p.email-error{
         display: none;
         font-size: 16px;
         margin-top: 0;
@@ -714,7 +714,7 @@ p {
 }
 
 
-.formulario-perfeccionamiento {
+.formulario-perfeccionamiento, .formulario-inscripcion {
   width: 300px;
   margin: 0 auto;
 }
@@ -814,7 +814,7 @@ p {
 // @include scrollbars(.5em, slategray);
 
 #contacto {
-  .formulario-contacto {
+  .formulario-contacto, .formulario-inscripcion {
     .sent-success, .contact-error, .send-email-error {
       color: #fff;
       text-align: center;
@@ -827,7 +827,7 @@ p {
         font-size: 18px;
         font-weight: normal;
         margin: 0;
-        &.feedback, &.empty-value {
+        &.feedback, &.empty-value, &.email-error {
           color: #fff;
           text-align: center;
           font-size: 18px;

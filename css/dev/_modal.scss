@@ -1,0 +1,23 @@
+#seminario-modal {
+  .modal-content {
+    max-height: 80vh;
+    overflow: auto;
+    height: auto !important;
+    form {
+      .form-control {
+        height: 27px !important;
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+    color: #a5a5a5;
+    margin: 4rem 0;
+  }
+  button {
+    text-align: center;
+  }
+}

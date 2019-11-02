@@ -64,31 +64,43 @@ var sendCourseEmail = function(title, el) {
 }
 
 var formValidation = function(data, email, form) {
-  var messageElement = form.find('.empty-value')
-  var validate = true
+  let messageElement = form.find('.empty-value')
+  let emailFeedback = form.find('.email-error')
+  let validate = true
+  let emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
   messageElement.hide()
+  if (emailFeedback) emailFeedback.hide()
+  if (email && !emailRegex.test(String(email).toLowerCase())) {
+    validate = false
+    if (emailFeedback) emailFeedback.show()
+  }
   _.each(data, function(value) {
     if (value == "") {
       messageElement.show()
       validate = false;
     }
   })
+  function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+  }
   return validate;
 }
 
-var sendEmailJS = function (data, template, successCallback, spinner, contact_form) {
+var sendEmailJS = function (data, template, successCallback, spinner, form) {
   if (spinner) {spinner.show()}
   emailjs.send('zoho', template, data)
   .then(function(response) {
-     console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
-     var messageElement = contact_form.find('.sent-success .feedback')
-     if (spinner) {spinner.hide()}
-     messageElement.show()
-     if (successCallback) {
-       successCallback(contact_form)
-     }
+    console.log('SUCCESS. status=%d, text=%s', response.status, response.text);
+    var messageElement = form.find('.sent-success .feedback')
+    if (spinner) {spinner.hide()}
+    messageElement.show()
+    if (successCallback) {
+      successCallback(form)
+    }
   }, function(err) {
-    var messageElement = contact_form.find('.send-email-error .feedback')
+    var messageElement = form.find('.send-email-error .feedback')
     messageElement.show()
     if (spinner) {spinner.hide()}
   });
@@ -96,11 +108,12 @@ var sendEmailJS = function (data, template, successCallback, spinner, contact_fo
 
 // Luego que se envía mensaje a admin se gatilla email para el cliente, en formulario de contactos
 var sendFeedbackContactEmail = function (contact_form) {
-  var email, name
-  email = contact_form.find('.email').val()
-  name = contact_form.find('.name').val()
-  var html = "<p>Estimado(a) " + name + ", hemos recibido tu mensaje. En breve contestaremos tu solicitud.</p>"
-  sendEmailJS({'name': name, 'email': email}, 'feedback_contacto', null, null, contact_form)
+  return
+  // var email, name
+  // email = contact_form.find('.email').val()
+  // name = contact_form.find('.name').val()
+  // var html = "<p>Estimado(a) " + name + ", hemos recibido tu mensaje. En breve contestaremos tu solicitud.</p>"
+  // sendEmailJS({'name': name, 'email': email}, 'feedback_contacto', null, null, contact_form)
 }
 
 var setParams = function (email, html, subject) {
